@@ -18,8 +18,9 @@ router.get('/', async (ctx, next) => {
   })
 })
 
-router.get('/string', async (ctx, next) => {
+router.post('/string', async (ctx, next) => {
   // ctx.body = 'koa2 string'
+    console.log(ctx);
   var obj = {
     name:"chuying",
     pass:"123"
