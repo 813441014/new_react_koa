@@ -37,7 +37,7 @@ let allServices = {
     },
     addUserData: (obj) => {
         console.log("snhadlnhdsklfjlksjf;lsjdf"+obj.name)
-        let _sql = "insert into user set name="+"'"+obj.name+"'"+",pass="+obj.pass
+        let _sql = "insert into user set name="+"'"+obj.name+"'"+",pass="+obj.pass+",phone="+obj.phone
         console.log(_sql)
         // // let _sql =`insert into user set name="${obj.name}"?,pass="${obj.pass}";`
         return allServices.query(_sql, obj)
