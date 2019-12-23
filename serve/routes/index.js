@@ -24,13 +24,28 @@ router.get('/',koaBody, async (ctx, next) => {
   })
 })
 
-router.post('/string', async (ctx, next) => {
+router.post('/register', async (ctx, next) => {
   // ctx.body = 'koa2 string'
     console.log("请注意");
     console.log(ctx.request.body);
     console.log(ctx.query.name);
   var obj = ctx.request.body;
   ctx.body = await userService.addUserData(obj);
+})
+
+router.post('/login', async (ctx, next) => {
+  console.log("123");
+  console.log(ctx);
+  // console.log(ctx.request.body);
+  // let _sql = `select * from users where name="${ctx.request.body.name}" pass=${ctx.request.body.pass}";`
+  // // let _sql = "insert into user set name="+"'"+ctx.request.body.name+"'"+",pass="+ctx.request.body.pass
+  // // console.log(_spl);
+  // ctx.body = {
+  //   title: _sql
+  // }
+  var obj = ctx.request.body;
+
+  ctx.body = await userService.login(obj);
 })
 
 router.get('/json', async (ctx, next) => {

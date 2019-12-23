@@ -43,6 +43,13 @@ let allServices = {
         return allServices.query(_sql, obj)
 
     },
+    login(obj){
+        // let _sql = `select * from user where name="'${obj.name}'" AND  pass=${obj.pass}";`
+        let _sql = "select * from user where name="+"'"+obj.name +"'"+ "AND" + " pass=" +obj.pass
+        // let _sql = "insert into user set name="+"'"+ctx.request.body.name+"'"+",pass="+ctx.request.body.pass
+        console.log(_sql);
+        return allServices.query(_sql, obj)
+    }
 }
 
 module.exports = allServices;
