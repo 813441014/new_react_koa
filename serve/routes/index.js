@@ -48,6 +48,15 @@ router.post('/login', async (ctx, next) => {
   ctx.body = await userService.login(obj);
 })
 
+
+router.post('/upload',async (ctx,next) =>{
+  console.log(ctx);
+  console.log("111")
+  console.log(ctx.request)
+  console.log(ctx.request.body)
+  ctx.body ="ddd"
+})
+
 router.get('/json', async (ctx, next) => {
   ctx.body = {
     title: 'koa2 json'
