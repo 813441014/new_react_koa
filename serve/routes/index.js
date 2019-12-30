@@ -57,10 +57,49 @@ router.post('/upload',async (ctx,next) =>{
   ctx.body ="ddd"
 })
 
-router.get('/json', async (ctx, next) => {
-  ctx.body = {
-    title: 'koa2 json'
-  }
-})
 
+router.get('/json', async (ctx, next) => {
+  console.log("sdklf");
+  ctx.body =
+    [
+        {
+          id:"0"
+       },
+      {
+        id:"0"
+      },
+      {
+        id:"0"
+      },
+      {
+        id:"0"
+      },
+      {
+        id:"0"
+      },
+      {
+      id:"0"
+      },
+      {
+        id:"0"
+      },
+      {
+        id:"0"
+      },
+      {
+        id:"0"
+      },
+      {
+        id:"0"
+      },
+      {
+        id:"0"
+      },
+      {
+        id:"0"
+      }
+
+    ]
+
+})
 module.exports = router
